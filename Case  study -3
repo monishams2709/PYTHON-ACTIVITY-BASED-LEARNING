@@ -1,0 +1,16 @@
+consultation = int(input("Enter consultation charge: "))
+diagnostic = int(input("Enter diagnostic charge: "))
+treatment = int(input("Enter treatment charge: "))
+age = int(input("Enter patient age: "))
+
+total = consultation + diagnostic + treatment
+
+if age >= 60:
+    total = total - total * 0.10
+
+print("Total Bill:", total)
+
+if total <= 5000:
+    print("Low Payment Category")
+else:
+    print("High Payment Category")
