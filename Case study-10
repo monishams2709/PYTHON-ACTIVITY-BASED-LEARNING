@@ -1,0 +1,19 @@
+venue = int(input("Enter venue cost: "))
+equipment = int(input("Enter equipment cost: "))
+food = int(input("Enter catering cost: "))
+transport = int(input("Enter transport cost: "))
+sponsor = int(input("Enter sponsorship amount: "))
+fee = int(input("Enter registration fee per student: "))
+
+total = venue + equipment + food + transport
+remaining = total - sponsor
+
+print("Total Event Cost:", total)
+
+if remaining <= 0:
+    print("Event Cost Covered by Sponsorship")
+elif fee > 0:
+    students = (remaining + fee - 1) // fee
+    print("Students Needed:", students)
+else:
+    print("Registration Fee Must Be Greater Than Zero")
