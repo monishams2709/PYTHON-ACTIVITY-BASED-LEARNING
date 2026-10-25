@@ -1,0 +1,19 @@
+distance = int(input("Enter distance in km: "))
+age = int(input("Enter passenger age: "))
+travel_class = input("Enter class (sleeper/AC): ")
+
+if travel_class == "sleeper":
+    fare = distance * 2
+elif travel_class == "AC":
+    fare = distance * 5
+else:
+    fare = 0
+
+if age >= 60 and fare > 0:
+    fare = fare * 0.80
+
+if fare > 0:
+    fare = fare + 50
+    print("Total Railway Fare:", fare)
+else:
+    print("Invalid travel class")
