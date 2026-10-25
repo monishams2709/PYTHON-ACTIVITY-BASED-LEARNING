@@ -1,0 +1,13 @@
+usd = float(input("Enter expenses in dollars: "))
+rate = float(input("Enter exchange rate: "))
+fee = float(input("Enter conversion fee: "))
+budget = float(input("Enter budget in rupees: "))
+
+total = usd * rate + fee
+
+print("Total Travel Cost:", total)
+
+if total <= budget:
+    print("Within Budget")
+else:
+    print("Budget Exceeded")
