@@ -1,0 +1,25 @@
+subjects = int(input("Enter number of subjects: "))
+grace = int(input("Enter grace marks: "))
+total = 0
+failed = False
+
+for i in range(subjects):
+    marks = int(input("Enter subject marks: "))
+
+    if marks < 35 and marks + grace >= 35:
+        marks = 35
+    if marks < 35:
+        failed = True
+
+    total += min(marks, 100)
+
+percentage = total / subjects
+
+if failed:
+    print("Result: Fail")
+elif percentage >= 75:
+    print("Result: Distinction")
+elif percentage >= 60:
+    print("Result: First Class")
+else:
+    print("Result: Pass")
